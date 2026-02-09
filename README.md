@@ -210,20 +210,21 @@ pnpm run release      # 自动升级版本并构建 Universal Binary
 
 ## 📸 图片显示说明
 
-本项目支持多平台图片显示优化：
+本项目统一使用本地图片引用，确保在所有平台正常显示：
 
-### 🔄 自动切换
-- **GitHub**: 自动使用 HTTP 图床链接，确保在 Windsurf 等工具中正常显示
-- **Gitee**: 使用本地图片引用，加载速度更快
+### � 图片配置
+- **GitHub**: 使用本地图片引用
+- **Gitee**: 使用本地图片引用
+- **本地开发**: 使用本地图片引用
 
-### 🛠️ 手动切换
+### 🛠️ 手动切换（如需要）
 ```bash
 # 快速切换（推荐）
 ./quick-switch.sh
 
 # 或手动指定平台
-./scripts/image-processor.sh github  # 切换到 GitHub 模式
-./scripts/image-processor.sh gitee   # 切换到 Gitee 模式
+./scripts/image-processor.sh github  # GitHub 模式（本地图片）
+./scripts/image-processor.sh gitee   # Gitee 模式（本地图片）
 ```
 
 详细说明请参考：[scripts/README-image-processor.md](scripts/README-image-processor.md)

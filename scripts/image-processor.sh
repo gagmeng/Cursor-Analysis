@@ -31,16 +31,16 @@ GITHUB_CURSOR_URL="https://raw.githubusercontent.com/congwa/Cursor-Analysis/main
 GITHUB_IMAGE_URL="https://raw.githubusercontent.com/congwa/Cursor-Analysis/main/image.png"
 
 if [ "$PLATFORM" = "github" ]; then
-    echo "切换到 GitHub 模式 - 使用 HTTP 图床链接..."
+    echo "切换到 GitHub 模式 - 使用本地图片引用..."
     
-    # 替换为 GitHub 的 raw 文件链接
-    sed -i.tmp 's|!\[Cursor界面](cursor.png)|![Cursor界面]('"$GITHUB_CURSOR_URL"')|g' "$README_FILE"
-    sed -i.tmp 's|!\[参考图](image.png)|![参考图]('"$GITHUB_IMAGE_URL"')|g' "$README_FILE"
+    # GitHub 模式也使用本地图片引用
+    sed -i.tmp 's|!\[Cursor界面](https://[^)]*/cursor\.png)|![Cursor界面](cursor.png)|g' "$README_FILE"
+    sed -i.tmp 's|!\[参考图](https://[^)]*/image\.png)|![参考图](image.png)|g' "$README_FILE"
     
     # 清理临时文件
     rm -f "$README_FILE.tmp"
     
-    echo "✅ 已切换到 GitHub 模式"
+    echo "✅ 已切换到 GitHub 模式（本地图片）"
     
 elif [ "$PLATFORM" = "gitee" ]; then
     echo "切换到 Gitee 模式 - 使用本地图片引用..."
