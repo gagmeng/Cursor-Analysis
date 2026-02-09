@@ -6,8 +6,9 @@
 
 Cursor Analysis 是一款专为 macOS 用户打造的桌面应用程序，用于深度分析 Cursor IDE 的使用情况。通过解析 Cursor 本地存储的 SQLite 数据库，为开发者提供全面的使用洞察，包括项目统计、代码贡献、会话管理和存储优化建议。
 
-![Cursor界面](cursor.png)
-![参考图](image.png)
+![](http://qiniu.biomed168.com/pic/image.png)
+![](http://qiniu.biomed168.com/pic/cursor.png)
+
 ### 核心价值
 
 - **数据可视化**：将 Cursor 的使用数据转化为直观的图表和统计信息
@@ -228,6 +229,14 @@ pnpm run release      # 自动升级版本并构建 Universal Binary
 ```
 
 详细说明请参考：[scripts/README-image-processor.md](scripts/README-image-processor.md)
+
+---
+
+![](http://qiniu.biomed168.com/pic/qq.jpg)
+
+---
+
+有帮助请给个 star
 
 ---
 
